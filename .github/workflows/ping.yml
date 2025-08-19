@@ -2,7 +2,7 @@ name: Ping
 
 on:
   schedule:
-    - cron: "*/5 * * * *" # every 5 minute
+    - cron: "*/1 * * * *" # every 5 minute
   workflow_dispatch: # allows manual run too
 
 jobs:
