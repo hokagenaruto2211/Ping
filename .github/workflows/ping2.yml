@@ -1,0 +1,14 @@
+name: Ping 2
+
+on:
+  schedule:
+    - cron: "*/1 * * * *" # every 1 minute
+  workflow_dispatch: # allows manual run too
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl your app
+        run: |
+          curl --silent --show-error https://creatorbowl-api.onrender.com/health-check || true
